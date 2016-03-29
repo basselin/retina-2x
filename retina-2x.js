@@ -39,10 +39,10 @@
             'src': src2
           };
           if ($img.width()) {
-            attr['width'];
+            attr['width'] = $img.width();
           }
           if ($img.height()) {
-            attr['height'];
+            attr['height'] = $img.height();
           }
           $img.attr(attr);
         }, 10);

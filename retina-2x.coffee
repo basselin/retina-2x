@@ -35,8 +35,8 @@ load2x = ->
                 attr = {
                     'src': src2
                 }
-                attr['width'] if $img.width()
-                attr['height'] if $img.height()
+                attr['width'] = $img.width() if $img.width()
+                attr['height'] = $img.height() if $img.height()
                 $img.attr attr
                 return
             , 10)
