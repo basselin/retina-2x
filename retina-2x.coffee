@@ -1,4 +1,4 @@
-# Copyright (c) 2015-2016 Benoit Asselin, http://161.io
+# Copyright (c) 161 SARL, https://161.io
 #'use strict'
 
 # Alternative Retina.js : loading issues
@@ -13,10 +13,11 @@ isRetina = ->
     return true if win.matchMedia && win.matchMedia(mediaQuery).matches
     false
 
-# Load images -2x
+# Load images -2x  OR  with attribute data-r2x=""
 load2x = ->
     suffix = '-2x'
     regexMatch = /\.\w+$/
+    data2x = 'r2x'
 
     # @param {String} str
     # @return {String}
@@ -25,9 +26,12 @@ load2x = ->
 
     $('img:not([data-no-retina])').each ->
         $img = $(@)
-        parts = $img.attr('src').split '?'
-        parts[0] = parts[0].replace regexMatch, suffixReplace
-        src2 = parts.join '?'
+        if $img.data data2x
+            src2 = $img.data data2x
+        else
+            parts = $img.attr('src').split '?'
+            parts[0] = parts[0].replace regexMatch, suffixReplace
+            src2 = parts.join '?'
 
         $tmpImg = $('<img>')
         $tmpImg.on 'load', ->

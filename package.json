@@ -1,0 +1,28 @@
+{
+    "name": "retina-2x",
+    "description": "Alternative Retina.js",
+    "version": "0.1.1",
+    "license": "MIT",
+    "main": "retina-2x.js",
+    "author": {
+        "name": "161 SARL - Benoit Asselin",
+        "url": "https://161.io"
+    },
+    "devDependencies": {
+        "grunt": "^1.0.1",
+        "grunt-contrib-coffee": "^1.0.0",
+        "grunt-contrib-uglify": "^3.1.0",
+        "grunt-contrib-watch": "^1.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/basselin/retina-2x.git"
+    },
+    "bugs": {
+        "url": "https://github.com/basselin/retina-2x/issues"
+    },
+    "homepage": "https://github.com/basselin/retina-2x",
+    "scripts": {
+        "build": "npm install && grunt"
+    }
+}

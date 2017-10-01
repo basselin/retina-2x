@@ -1,14 +1,9 @@
 {
     "name": "retina-2x",
     "description": "Tiny alternative Retina.js",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "license": "MIT",
     "main": "retina-2x.js",
-    "author": {
-        "name": "Benoit Asselin",
-        "email": "benoit(at)161.io",
-        "url": "http://161.io"
-    },
     "repository": {
         "type": "git",
         "url": "git://github.com/basselin/retina-2x.git"
